@@ -1,0 +1,24 @@
+{
+    "name": "git-diff-dependencies",
+    "version": "0.1.0",
+    "description": "",
+    "main": "build/index.js",
+    "bin": "build/index.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "start": "yarn build && node build/index.js --repositoryPath /Users/janchalupa/Projects/portfolio --commitToCompare feffbceb3b38847eaf1cb374a72406be125584f8 --filterPattern \"modules/(.+?/pages/.+?)/\""
+    },
+    "author": "Jan Chalupa",
+    "license": "ISC",
+    "dependencies": {
+        "gitdiff-parser": "^0.3.0",
+        "minimist": "^1.2.8",
+        "simple-git": "^3.16.1"
+    },
+    "devDependencies": {
+        "@types/minimist": "^1.2.2",
+        "@types/node": "^18.14.5",
+        "typescript": "^4.9.5"
+    }
+}
